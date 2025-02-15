@@ -11,48 +11,48 @@ kind: ClusterConfig
 kubernetesNetworkConfig:
   ipFamily: IPv4
 managedNodeGroups:
-  - amiFamily: AmazonLinux2023
-    desiredCapacity: 3
-    disableIMDSv1: true
-    disablePodIMDS: false
-    iam:
-      withAddonPolicies:
-        albIngress: false
-        appMesh: false
-        appMeshPreview: false
-        autoScaler: false
-        awsLoadBalancerController: true
-        certManager: false
-        cloudWatch: false
-        ebs: false
-        efs: false
-        externalDNS: true
-        fsx: false
-        imageBuilder: true
-        xRay: false
-    instanceSelector: {}
-    instanceType: t3.medium
-    labels:
-      alpha.eksctl.io/cluster-name: myeks
-      alpha.eksctl.io/nodegroup-name: ng1
-    maxSize: 3
-    minSize: 3
-    name: ng1
-    privateNetworking: false
-    releaseVersion: ""
-    securityGroups:
-      withLocal: null
-      withShared: null
-    ssh:
-      allow: true
-      publicKeyName: bocopile-eks
-    tags:
-      alpha.eksctl.io/nodegroup-name: ng1
-      alpha.eksctl.io/nodegroup-type: managed
-    volumeIOPS: 3000
-    volumeSize: 30
-    volumeThroughput: 125
-    volumeType: gp3
+- amiFamily: AmazonLinux2023
+  desiredCapacity: 3
+  disableIMDSv1: true
+  disablePodIMDS: false
+  iam:
+    withAddonPolicies:
+      albIngress: false
+      appMesh: false
+      appMeshPreview: false
+      autoScaler: false
+      awsLoadBalancerController: true
+      certManager: false
+      cloudWatch: false
+      ebs: false
+      efs: false
+      externalDNS: true
+      fsx: false
+      imageBuilder: true
+      xRay: false
+  instanceSelector: {}
+  instanceType: t3.medium
+  labels:
+    alpha.eksctl.io/cluster-name: myeks
+    alpha.eksctl.io/nodegroup-name: ng1
+  maxSize: 3
+  minSize: 3
+  name: ng1
+  privateNetworking: false
+  releaseVersion: ""
+  securityGroups:
+    withLocal: null
+    withShared: null
+  ssh:
+    allow: true
+    publicKeyName: bocopile-key
+  tags:
+    alpha.eksctl.io/nodegroup-name: ng1
+    alpha.eksctl.io/nodegroup-type: managed
+  volumeIOPS: 3000
+  volumeSize: 30
+  volumeThroughput: 125
+  volumeType: gp3
 metadata:
   name: myeks
   region: ap-northeast-2
@@ -66,7 +66,7 @@ vpc:
   clusterEndpoints:
     privateAccess: false
     publicAccess: true
-  id: vpc-
+  id: vpc-08aa1a8560649706c
   manageSharedNodeSecurityGroupRules: true
   nat:
     gateway: Disable
@@ -75,12 +75,12 @@ vpc:
       ap-northeast-2a:
         az: ap-northeast-2a
         cidr: 192.168.1.0/24
-        id: subnet-
+        id: subnet-07c66d8f12f5dcd5f
       ap-northeast-2b:
         az: ap-northeast-2b
         cidr: 192.168.2.0/24
-        id: subnet-
+        id: subnet-031fc04262cc717ce
       ap-northeast-2c:
         az: ap-northeast-2c
         cidr: 192.168.3.0/24
-        id: subnet-
+        id: subnet-0874d9dca1b1a000f
