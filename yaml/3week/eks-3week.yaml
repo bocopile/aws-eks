@@ -20,21 +20,21 @@ vpc:
   clusterEndpoints:
     privateAccess: true # if you only want to allow private access to the cluster
     publicAccess: true # if you want to allow public access to the cluster
-  id: vpc-0a18945f7a3a7d445
+  id: vpc-0d9e86031f560c833
   subnets:
     public:
       ap-northeast-2a:
         az: ap-northeast-2a
         cidr: 192.168.1.0/24
-        id: subnet-00a4ffb1b68fef0f5
+        id: subnet-0d41cb1dd135817f6
       ap-northeast-2b:
         az: ap-northeast-2b
         cidr: 192.168.2.0/24
-        id: subnet-0a52a9b3a67f86fbf
+        id: subnet-088a1a9412bdb8f92
       ap-northeast-2c:
         az: ap-northeast-2c
         cidr: 192.168.3.0/24
-        id: subnet-00c308872f5f683a0
+        id: subnet-0b5e4b799ff62b4e2
 
 addons:
   - name: vpc-cni # no version is specified so it deploys the default version
