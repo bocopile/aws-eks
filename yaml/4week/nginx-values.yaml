@@ -13,7 +13,7 @@ ingress:
   pathType: Prefix
   path: /
   annotations: 
-    alb.ingress.kubernetes.io/certificate-arn: arn:aws:acm:ap-northeast-2:867344478065:certificate/b8c50ad1-8db7-42dc-8148-5a26eb220b9b
+    alb.ingress.kubernetes.io/certificate-arn: arn:aws:acm:ap-northeast-2:867344478065:certificate/617fa9fd-404f-4c75-923c-49d4f41378dc
     alb.ingress.kubernetes.io/group.name: study
     alb.ingress.kubernetes.io/listen-ports: '[{"HTTPS":443}, {"HTTP":80}]'
     alb.ingress.kubernetes.io/load-balancer-name: myeks-ingress-alb
